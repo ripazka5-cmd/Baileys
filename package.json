@@ -1,10 +1,10 @@
 {
-  "name": "@poucode/baileys",
+  "name": "@kaacrash/baileys",
   "type": "module",
   "version": "2.0.1",
-  "description": "WaBail — PouCode fork of Baileys: WhatsApp Web WebSocket library with merged extra socket layers (privacy, interop, GraphQL, message builder), sticker packs and SQLite auth state",
+  "description": "A WebSockets library for interacting with WhatsApp Web — Kaacrash fork of Baileys",
   "keywords": [
-    "poucode",
+    "kaacrash",
     "baileys",
     "whatsapp",
     "whatsapp-api",
@@ -14,14 +14,20 @@
     "wabail",
     "whatsapp-bot"
   ],
-  "homepage": "https://github.com/pou-code/WaBail",
+  "homepage": "https://github.com/ripazka5-cmd/Baileys",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pou-code/WaBail.git"
+    "url": "git+https://github.com/ripazka5-cmd/Baileys.git"
   },
   "license": "MIT",
-  "author": "PouCode",
+  "author": "kaacrash",
   "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "require": "./lib/index.cjs",
+      "import": "./lib/index.js"
+    }
+  },
   "files": [
     "lib/**/*",
     "WAProto/**/*",
@@ -38,7 +44,7 @@
     "lint:fix": "eslint src --fix --ext .js,.ts,.jsx,.tsx",
     "prepack": "",
     "prepare": "",
-    "preinstall": "node ./engine-requirements.js",
+    "preinstall": "",
     "release": "release-it",
     "test": "jest",
     "test:smoke": "node --test test/smoke.test.mjs"
@@ -146,7 +152,7 @@
     "node": ">=20.0.0"
   },
   "bugs": {
-    "url": "https://github.com/pou-code/WaBail/issues"
+    "url": "https://github.com/ripazka5-cmd/Baileys/issues"
   },
   "contributors": [
     "WhiskeySockets (original Baileys authors)"
